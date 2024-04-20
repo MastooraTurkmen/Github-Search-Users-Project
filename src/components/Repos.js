@@ -7,10 +7,25 @@ const Repos = () => {
   const { repos } = React.useContext(GithubContext)
   console.log(repos);
 
+  const chartData = [
+    {
+      label: "HTML",
+      value: "13"
+    },
+    {
+      label: "CSS",
+      value: "20"
+    },
+    {
+      label: "JavaScript",
+      value: "80"
+    },
+  ];
+
   return (
     <section className='section'>
       <Wrapper className='section-center'>
-        <ExampleChart />
+        <ExampleChart data={chartData} />
       </Wrapper>
     </section>
   )
