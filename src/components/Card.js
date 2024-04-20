@@ -15,7 +15,7 @@ const Card = () => {
           <h4>{name}</h4>
           <p>@{twitter_username || 'john doe'}</p>
         </div>
-        <a href={html_url}>follow</a>
+        <a target='_blank' href={html_url}>follow</a>
       </header>
       <p className="bio">{bio}</p>
       <div className="links">
