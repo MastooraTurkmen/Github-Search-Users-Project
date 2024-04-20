@@ -45,7 +45,7 @@ version used - "react-router-dom@6": "^6.2.0",
 ## Gihthub API
 
 - [Root Endpoint](https://api.github.com)
-- [Get User](https://api.github.com/users/wesbos)
+- [Get User](https://api.github.com/users/MastooraTurkmen)
 - [Repos](https://api.github.com/users/MastooraTurkmen/repos?per_page=100)
 - [Followers](https://api.github.com/users/MastooraTurkmen/followers)
 - [Rate Limit](https://api.github.com/rate_limit)
