@@ -18,7 +18,7 @@ export default {
   type: "User",
   site_admin: false,
   name: "Mastoora Turkmen",
-  company: null,
+  company: "Woosat",
   blog: "https://mastooraturkmen.me/",
   location: "Kabul, Afghanistan",
   email: null,
