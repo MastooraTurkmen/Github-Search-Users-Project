@@ -13,7 +13,7 @@ const GithubProvider = ({ children }) => {
     const [repos, setRepos] = useState(mockRepos)
     const [followers, setFollowers] = useState(mockFollowers);
     const [requests, setRequests] = useState(0);
-    const [loading, setLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState({ show: false, msg: '' })
 
     const checkRequests = () => {
@@ -33,18 +33,22 @@ const GithubProvider = ({ children }) => {
     }
 
     const searchGithubUser = async (user) => {
+        handleError()
+        setIsLoading(true)
         const response = await axios(`${rootUrl}/users/${user}`).catch(error => console.log(error))
         if (response) {
             setGithubUser(response.data)
         } else {
             handleError(true, 'there is no User with that username')
         }
+        setIsLoading(false);
+        checkRequests();
     }
 
     useEffect(checkRequests, [])
 
     return (
-        <GithubContext.Provider value={{ githubUser, repos, followers, requests, error, searchGithubUser }}>
+        <GithubContext.Provider value={{ githubUser, repos, followers, requests, error, isLoading, searchGithubUser }}>
             {children}
         </GithubContext.Provider>
     )
