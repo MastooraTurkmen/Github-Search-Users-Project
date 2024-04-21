@@ -3,8 +3,8 @@ import { GithubContext } from '../context/context';
 import styled from 'styled-components';
 
 const Followers = () => {
-  const { followers } = React.useContext(GithubContext)
-  console.log(followers);
+  const { followers } = React.useContext(GithubContext);
+  
   return (
     <Wrapper>
       <div className="followers">
