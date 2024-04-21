@@ -49,21 +49,6 @@ const Repos = () => {
   stars = Object.values(stars).slice(-5).reverse()
   forks = Object.values(forks).slice(-5).reverse()
 
-  const chartData = [
-    {
-      label: "HTML",
-      value: "113"
-    },
-    {
-      label: "CSS",
-      value: "20"
-    },
-    {
-      label: "JavaScript",
-      value: "80"
-    },
-  ];
-
   return (
     <section className='section'>
       <Wrapper className='section-center'>
@@ -74,7 +59,6 @@ const Repos = () => {
       </Wrapper>
     </section>
   )
-
 };
 
 const Wrapper = styled.div`
