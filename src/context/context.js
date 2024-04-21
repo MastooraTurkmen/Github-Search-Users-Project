@@ -32,10 +32,19 @@ const GithubProvider = ({ children }) => {
         setError({ show, msg })
     }
 
+    const searchGithubUser = async (user) => {
+        const response = await axios(`${rootUrl}/users/${user}`).catch(error => console.log(error))
+        if (response) {
+            setGithubUser(response.data)
+        } else {
+            handleError(true, 'there is no User with that username')
+        }
+    }
+
     useEffect(checkRequests, [])
 
     return (
-        <GithubContext.Provider value={{ githubUser, repos, followers, requests, error }}>
+        <GithubContext.Provider value={{ githubUser, repos, followers, requests, error, searchGithubUser }}>
             {children}
         </GithubContext.Provider>
     )
