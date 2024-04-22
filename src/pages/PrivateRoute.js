@@ -12,9 +12,5 @@ const PrivateRoute = ({ children }) => {
   }
 
   return children;
-
-  // return <Route {...rest} render={() => {
-  //   return isUser ? children : <Navigate to='/login' />
-  // }} />
 };
 export default PrivateRoute;
