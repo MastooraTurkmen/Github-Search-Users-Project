@@ -1,9 +1,6 @@
-## Starter Project
+## Github Users Search Project
 
-- css provided (global styles, styled components)
-- folders/files already setup
-- all imports included (warnings)
-- index.js for easier imports
+[Live](https://github-search-user-project.netlify.app)
 
 ## Styled Components
 
